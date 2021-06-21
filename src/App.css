@@ -1,11 +1,7 @@
-.webAppOuter{
+.webApp{
   display: flex;
   background-color: #222;
   height: 100vh;
   justify-content: center;
   align-items: center;
-}
-
-.webAppOuter h1{
-  color: #fff;
 }

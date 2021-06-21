@@ -1,0 +1,36 @@
+.expenseOuter{
+    width: 95%;
+    margin: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.expenseInner{
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.sectionOneOuter{
+    width: 80%;
+    background-color: #CADEEC;
+}
+
+.sectionOneInner{
+    display: flex;
+    align-items: center;
+}
+
+
+
+.sectionTwoOuter{
+    width: 20%;
+    background-color: #1B98F5;
+    height: 100%;
+}
+
+.sectionTwoInner{
+    
+}
