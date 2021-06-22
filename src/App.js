@@ -8,20 +8,20 @@ function App() {
         {
             sno : 1,
             title : 'MacBook Pro',
-            date : new Date(2021, 6, 22),
+            date : new Date(2024, 6, 22),
             amount : 2695.18
         },
         {
             sno : 2,
-            title : 'MacBook Pro',
-            date : new Date(2021, 6, 22),
-            amount : 2695.18
+            title : 'Les Ass LG Monitor',
+            date : new Date(2026, 6, 22),
+            amount : 1049.97
         },
         {
             sno : 3,
-            title : 'MacBook Pro',
-            date : new Date(2021, 6, 22),
-            amount : 2695.18
+            title : 'Big Ass LG Monitor',
+            date : new Date(2027, 6, 22),
+            amount : 1299.00
         },
     ]
 

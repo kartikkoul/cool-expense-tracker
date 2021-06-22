@@ -3,8 +3,6 @@ import './Expense.css'
 
 const Expense = (props) => {
 
-    console.log(props.expenseObj);
-
     return (
         <div className='expenseOuter'>
             <div className="expenseInner">
