@@ -13,7 +13,7 @@ function App() {
         },
         {
             sno : 2,
-            title : 'Les Ass LG Monitor',
+            title : 'Less Ass LG Monitor',
             date : new Date(2026, 6, 22),
             amount : 1049.97
         },

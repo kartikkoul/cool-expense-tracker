@@ -3,6 +3,11 @@ import './Expense.css'
 
 const Expense = (props) => {
 
+    const DD = props.expenseObj.date.toLocaleDateString('en-US', {day :'numeric'});
+    const YY = props.expenseObj.date.toLocaleDateString('en-US', {year : 'numeric'});
+    const MM = props.expenseObj.date.toLocaleDateString('en-US', {month : 'long'}).slice(0,3).toUpperCase();
+
+
     return (
         <div className='expenseOuter'>
             <div className="expenseInner">
@@ -10,20 +15,20 @@ const Expense = (props) => {
                     <div className="sectionOneInner">
                         <div className="date">
                             <div className="MMYY">
-                                <p>JUN 2021</p>
+                                <p>{MM} {YY}</p>
                             </div>
                             <div className="DD">
-                                <p>21</p>
+                                <p>{DD}</p>
                             </div>
                         </div>
                         <div className="title">
-                            <p>MacBook Pro</p>
+                            <p>{props.expenseObj.title}</p>
                         </div>
                     </div>
                 </div>
                 <div className="sectionTwoOuter">
                     <div className="sectionTwoInner">
-                        <p><span className="dollarSign">$</span>2,695.18</p>
+                        <p><span className="dollarSign">$</span>{props.expenseObj.amount}</p>
                     </div>
                 </div>
             </div>
