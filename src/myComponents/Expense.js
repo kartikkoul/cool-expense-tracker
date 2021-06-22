@@ -1,7 +1,10 @@
 import React from 'react'
 import './Expense.css'
 
-const Expense = () => {
+const Expense = (props) => {
+
+    console.log(props.expenseObj);
+
     return (
         <div className='expenseOuter'>
             <div className="expenseInner">
