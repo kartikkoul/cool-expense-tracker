@@ -1,6 +1,6 @@
 .expensesOuter{
     height: max-content;
-    width: 90%;
+    width: 95%;
     background-color: rgba(255, 255, 255, 0.24);
     border-radius: 15px;
 }
@@ -8,6 +8,6 @@
 .expensesInner{
     width: 100%;
     display: flex;
-    align-items: center;
     flex-direction: column;
+    height: max-content;
 }
