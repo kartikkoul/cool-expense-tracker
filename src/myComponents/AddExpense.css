@@ -1,6 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 .addExpenseOuter{
-    height: max-content;
+    height: 15%;
     width: 95%;
     background-color: #fff;
     border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 1.9%;
 }
+
+.addExpenseInner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.addExpenseInner button{
+    border: 0px;
+    border-radius: 15px;
+    background-color: #1B98F5;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    height: 60%;
+    width: 24%;
+    font-size: 12px;
+    font-weight: 500;
+    transition: 300ms;
+    margin-top: 3%;
+}
+
+.addExpenseInner button:hover{
+    cursor: pointer;
+    background-color: #1978c0;
+}
+
+
+
+.addExpenseInner .inputs input{
+    font-family: 'Poppins', sans-serif;
+    font-size: 70%;
+    margin: 6px;
+}
+
+.addExpenseInner .inputs input:hover{
+    cursor:text;
+    border: 2px solid #1B98F5;
+}
+
+.addExpenseInner .buttonArea{
+    display: flex;
+    justify-content: center;
+}
+
