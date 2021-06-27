@@ -1,6 +1,7 @@
 
 import './App.css';
 import Expenses from './myComponents/Expenses';
+import AddExpense from './myComponents/AddExpense';
 
 function App() {
 
@@ -27,6 +28,7 @@ function App() {
 
   return (
     <div className="webApp">
+      <AddExpense/>
       <Expenses expenseObj={expenseObj}/>
     </div>
   );
