@@ -17,7 +17,7 @@ const Chart = () => {
                     </select> 
                 </div>
                 
-                <div className="chartSection">
+                <div className="chartSection"> 
                     CHART GOES HERE!!
                 </div>
             </div>
