@@ -6,7 +6,7 @@ const Expenses = (props) => {
     return (
         <div className="expensesOuter">
             <div className="expensesInner">
-                {props.expenseObj.map(e=><Expense expenseObj={e}/>)}
+                {props.expenseObj.map(e=><Expense key={e.id} expenseObj={e}/>)}
             </div>
         </div>
     )

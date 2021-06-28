@@ -24,7 +24,7 @@ const AddExpense = (props) => {
         e.preventDefault();
     
         const newExpense = {
-            sno : Math.random().toString(),
+            id : Math.random().toString(),
             title : inputTitle,
             date : new Date(inputDate),
             amount : inputAmount
@@ -48,7 +48,7 @@ const AddExpense = (props) => {
             <div className="addExpenseInner">
                 <form onSubmit={addNewExpense}>
                     <div className="inputs">
-                        <input type="text" value={inputTitle} placeholder="TITLE" onChange={titleChangeHandler}/>
+                        <input type="text" value={inputTitle} placeholder="Title" onChange={titleChangeHandler}/>
                         <input type="number" value={inputAmount} placeholder="Amount" onChange={amountChangeHandler}/>
                         <input type="date" value={inputDate} onChange={dateChangeHandler}/>
                     </div>

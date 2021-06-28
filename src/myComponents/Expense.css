@@ -4,11 +4,11 @@
     display: flex;
     justify-content: center;
     height: 51px;
-    transition: 200ms;
+    transition: 300ms;
 }
 
 .expenseOuter:hover{
-    box-shadow: 0px 10px 24px 0px rgba(0, 0, 0, 0.233);
+    box-shadow: 0px 10px 15px 1px rgba(0, 0, 0, 0.205);
 }
 
 .expenseInner{
