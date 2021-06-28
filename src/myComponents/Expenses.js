@@ -6,12 +6,10 @@ const Expenses = (props) => {
     return (
         <div className="expensesOuter">
             <div className="expensesInner">
-                <Expense expenseObj={props.expenseObj[0]}/>
-                <Expense expenseObj={props.expenseObj[1]}/>
-                <Expense expenseObj={props.expenseObj[2]}/>
+                {props.expenseObj.map(e=><Expense expenseObj={e}/>)}
             </div>
         </div>
     )
 }
 
-export default Expenses
+export default Expenses 

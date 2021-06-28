@@ -32,8 +32,11 @@ const AddExpense = (props) => {
 
         console.log(newExpense);
 
-        props.newExpenseObj.push(newExpense);
-        
+
+
+
+        props.setexpenses([newExpense, ...props.expenses]);
+
         setinputTitle('');
         setinputDate('');
         setinputAmount('');

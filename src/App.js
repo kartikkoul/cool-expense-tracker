@@ -1,11 +1,11 @@
-
+import {useState} from 'react';
 import './App.css';
 import Expenses from './myComponents/Expenses';
 import AddExpense from './myComponents/AddExpense';
 
 function App() {
 
-  const expenseObj = [
+  const DUMMY_EXPENSES_DATA = [
         {
             sno : 1,
             title : 'MacBook Pro',
@@ -26,17 +26,20 @@ function App() {
         },
     ]
 
-    const debugHandler = () => {
-      console.log(expenseObj);
-    }
+   
+
+    const [expenses, setexpenses] = useState(DUMMY_EXPENSES_DATA)
     
+    const debugHandler = () => {
+      console.log(expenses);
+    }
     
 
   return (
     <div className="webApp">
       <button onClick={debugHandler} className="debugButton">Debug</button>
-      <AddExpense newExpenseObj={expenseObj}/>
-      <Expenses expenseObj={expenseObj}/>
+      <AddExpense expenses={expenses} setexpenses={setexpenses}/>
+      <Expenses expenseObj={expenses}/>
     </div>
 
   );
