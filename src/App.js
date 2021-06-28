@@ -26,11 +26,19 @@ function App() {
         },
     ]
 
+    const debugHandler = () => {
+      console.log(expenseObj);
+    }
+    
+    
+
   return (
     <div className="webApp">
-      <AddExpense/>
+      <button onClick={debugHandler} className="debugButton">Debug</button>
+      <AddExpense newExpenseObj={expenseObj}/>
       <Expenses expenseObj={expenseObj}/>
     </div>
+
   );
 }
 
