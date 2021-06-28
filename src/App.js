@@ -1,7 +1,8 @@
 import {useState} from 'react';
 import './App.css';
-import Expenses from './myComponents/Expenses';
-import AddExpense from './myComponents/AddExpense';
+import Expenses from './myComponents/expensesListSection/Expenses';
+import AddExpense from './myComponents/addExpenseSection/AddExpense';
+import Chart from './myComponents/chartSection/Chart';
 
 function App() {
 
@@ -39,6 +40,7 @@ function App() {
     <div className="webApp">
       <button onClick={debugHandler} className="debugButton">Debug</button>
       <AddExpense expenses={expenses} setexpenses={setexpenses}/>
+      <Chart/>
       <Expenses expenseObj={expenses}/>
     </div>
 
