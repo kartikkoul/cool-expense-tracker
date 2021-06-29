@@ -13,10 +13,10 @@ const ChartBar = (props) => {
         <div className="chartBar">
             <div className="chartBarInner">
                 <div className="chartBarFill" style={{height:barFillHeight}}></div>
-                <div className="label">{props.label}</div>
             </div>
+            <div className="label">{props.label}</div>
         </div>
     )
 }
 
-export default ChartBar
+export default ChartBar;

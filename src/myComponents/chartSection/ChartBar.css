@@ -1,11 +1,26 @@
 .chartBar{
     width: 100%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.charBarInner{
-    width: 24px;
-    height: 152px;
+.chartBarInner{
+    width: 15%;
+    height: 132px;
     background-color: #C4C4C4;
     border-radius: 15px;
+}
+
+.charBarInner .chartBarFill{
+    width: 100%;
+    background-color: black;
+}
+
+.chartBar .label{
+    font-size: 10px;
+    margin-top: 2px;
+    margin-left: 1px;
 }
