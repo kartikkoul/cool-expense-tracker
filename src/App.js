@@ -10,29 +10,43 @@ function App() {
         {
             id : '1',
             title : 'MacBook Pro',
-            date : new Date(2024, 6, 22),
+            date : new Date(2021, 6, 22),
             amount : 2695.18
         },
         {
             id : '2',
             title : 'Less Ass LG Monitor',
-            date : new Date(2026, 6, 22),
+            date : new Date(2021, 6, 22),
             amount : 1049.97
         },
         {
             id : '3',
             title : 'Big Ass LG Monitor',
-            date : new Date(2027, 6, 22),
+            date : new Date(2021, 6, 22),
             amount : 1299.00
         },
+        {
+            id : '4',
+            title : 'Projector',
+            date : new Date(2020, 6, 22),
+            amount : 399.00
+        },
+        {
+          id : '5',
+          title : 'PS5',
+          date : new Date(2019, 6, 22),
+          amount : 499.00
+      },
     ]
 
    
 
-    const [expenses, setexpenses] = useState(DUMMY_EXPENSES_DATA)
-    
+    const [expenses, setexpenses] = useState(DUMMY_EXPENSES_DATA);
+    const [filterYear, setfilterYear] = useState(expenses);
+
     const debugHandler = () => {
       console.log(expenses);
+      console.log(filterYear);
     }
     
 
@@ -40,8 +54,8 @@ function App() {
     <div className="webApp">
       <button onClick={debugHandler} className="debugButton">Debug</button>
       <AddExpense expenses={expenses} setexpenses={setexpenses}/>
-      <Chart/>
-      <Expenses expenseObj={expenses}/>
+      <Chart expenses={expenses} setFilterYear={setfilterYear}/>
+      <Expenses expenseObj={expenses} filterYear={filterYear}/>
     </div>
 
   );

@@ -2,13 +2,14 @@ import React from 'react'
 import './Chart.css'
 
 
-const Chart = () => {
-
-    let filterYear = '';
+const Chart = (props) => {
 
     const filteredYear = e =>{
-        filterYear=e.target.value;
+        props.setFilterYear(
+            e.target.value==='All'?props.expenses:props.expenses.filter(expenses => expenses.date.toLocaleDateString('en-US', {year : 'numeric'})===e.target.value)
+        );
     }
+
 
 
     return (
@@ -18,6 +19,7 @@ const Chart = () => {
                 <div className="filterSection">
                     <p>Filter by year</p>
                     <select onChange={filteredYear}>
+                        <option value="All">All</option>
                         <option value="2021">2021</option>
                         <option value="2020">2020</option>
                         <option value="2019">2019</option>
