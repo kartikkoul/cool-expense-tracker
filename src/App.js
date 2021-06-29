@@ -22,7 +22,7 @@ function App() {
         {
             id : '3',
             title : 'Big Ass LG Monitor',
-            date : new Date(2021, 6, 22),
+            date : new Date(2021, 7, 22),
             amount : 1299.00
         },
         {

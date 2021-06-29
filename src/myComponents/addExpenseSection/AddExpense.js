@@ -22,15 +22,18 @@ const AddExpense = (props) => {
 
     const addNewExpense = (e) =>{
         e.preventDefault();
-    
-        const newExpense = {
+
+
+      
+        const newExpense= {
             id : Math.random().toString(),
             title : inputTitle,
             date : new Date(inputDate),
             amount : inputAmount
         }
-
+    
         console.log(newExpense);
+   
 
 
 
