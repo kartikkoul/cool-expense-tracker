@@ -31,7 +31,7 @@ const Chart = (props) => {
                 </div>
                 
                 <div className="chartSection"> 
-                     {props.dataPoints.map(dataPoint => <ChartBar key={dataPoint.label)} value={dataPoint.value} maxValue={totalMaximum} label={dataPoint.label}/>)}
+                     {props.dataPoints.map(dataPoint => <ChartBar key={dataPoint.label} value={dataPoint.value} maxValue={totalMaximum} label={dataPoint.label}/>)}
                 </div>
             </div>
         </div>
