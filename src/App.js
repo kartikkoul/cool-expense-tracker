@@ -2,7 +2,7 @@ import {useState} from 'react';
 import './App.css';
 import Expenses from './myComponents/expensesListSection/Expenses';
 import AddExpense from './myComponents/addExpenseSection/AddExpense';
-import Chart from './myComponents/chartSection/Chart';
+import ExpenseChart from './myComponents/expensesListSection/ExpenseChart';
 
 function App() {
 
@@ -54,7 +54,7 @@ function App() {
     <div className="webApp">
       <button onClick={debugHandler} className="debugButton">Debug</button>
       <AddExpense expenses={expenses} setexpenses={setexpenses}/>
-      <Chart expenses={expenses} setFilterYear={setfilterYear}/>
+      <ExpenseChart expenses={expenses} setFilterYear={setfilterYear}/>
       <Expenses expenseObj={expenses} filterYear={filterYear}/>
     </div>
 

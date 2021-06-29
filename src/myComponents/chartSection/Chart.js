@@ -1,5 +1,6 @@
 import React from 'react'
 import './Chart.css'
+import ChartBar from './ChartBar'
 
 
 const Chart = (props) => {
@@ -15,7 +16,6 @@ const Chart = (props) => {
     return (
         <div className="chartOuter">
             <div className="chartInner">
-
                 <div className="filterSection">
                     <p>Filter by year</p>
                     <select onChange={filteredYear}>
@@ -28,7 +28,7 @@ const Chart = (props) => {
                 </div>
                 
                 <div className="chartSection"> 
-                    CHART GOES HERE!!
+                     <ChartBar/>
                 </div>
             </div>
         </div>
