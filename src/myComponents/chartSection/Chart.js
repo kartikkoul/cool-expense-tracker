@@ -5,6 +5,9 @@ import ChartBar from './ChartBar'
 
 const Chart = (props) => {
 
+    const dataPointValues = props.dataPoints.map(dataPoint => dataPoint.value)
+    const totalMaximum = Math.max(...dataPointValues);
+
     const filteredYear = e =>{
         props.setFilterYear(
             e.target.value==='All'?props.expenses:props.expenses.filter(expenses => expenses.date.toLocaleDateString('en-US', {year : 'numeric'})===e.target.value)
@@ -28,7 +31,7 @@ const Chart = (props) => {
                 </div>
                 
                 <div className="chartSection"> 
-                     <ChartBar/>
+                     {props.dataPoints.map(dataPoint => <ChartBar key={dataPoint.label)} value={dataPoint.value} maxValue={totalMaximum} label={dataPoint.label}/>)}
                 </div>
             </div>
         </div>
