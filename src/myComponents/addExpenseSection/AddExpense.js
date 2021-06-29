@@ -23,8 +23,6 @@ const AddExpense = (props) => {
     const addNewExpense = (e) =>{
         e.preventDefault();
 
-
-      
         const newExpense= {
             id : Math.random().toString(),
             title : inputTitle,
@@ -34,11 +32,8 @@ const AddExpense = (props) => {
     
         console.log(newExpense);
    
-
-
-
-
         props.setexpenses([newExpense, ...props.expenses]);
+        props.setFilterYear([newExpense, ...props.filterYear]);
 
         setinputTitle('');
         setinputDate('');

@@ -53,7 +53,7 @@ function App() {
   return (
     <div className="webApp">
       <button onClick={debugHandler} className="debugButton">Debug</button>
-      <AddExpense expenses={expenses} setexpenses={setexpenses}/>
+      <AddExpense expenses={expenses} setexpenses={setexpenses} filterYear={filterYear} setFilterYear={setfilterYear}/>
       <ExpenseChart expenses={expenses} filterYear={filterYear} setFilterYear={setfilterYear}/>
       <Expenses expenseObj={expenses} filterYear={filterYear}/>
     </div>
