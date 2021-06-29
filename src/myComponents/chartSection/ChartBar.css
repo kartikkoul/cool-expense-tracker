@@ -47,4 +47,9 @@
         padding-left: 2%;
         padding-right: 2%;
     }
+
+    .chartBar .label{
+        font-size: 8px;
+        margin-top: 2px;
+    }
 }
