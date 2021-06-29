@@ -28,7 +28,7 @@ const AddExpense = (props) => {
         const newExpense= {
             id : Math.random().toString(),
             title : inputTitle,
-            date : new Date(inputDate),
+            date : new Date(inputDate), 
             amount : inputAmount
         }
     
