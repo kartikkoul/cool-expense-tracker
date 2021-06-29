@@ -56,6 +56,21 @@ function App() {
       <AddExpense expenses={expenses} setexpenses={setexpenses} filterYear={filterYear} setFilterYear={setfilterYear}/>
       <ExpenseChart expenses={expenses} filterYear={filterYear} setFilterYear={setfilterYear}/>
       <Expenses expenseObj={expenses} filterYear={filterYear}/>
+
+
+      <footer style={{
+        position:'relative',
+        bottom:0,
+        width:'95%',
+        height:'33px',
+        'margin-top':'1.9%',
+        marginBottom:'2px',
+        display:'flex',
+        justifyContent:'center',
+        alignItems:'center'
+      }}>
+        <p>Made with Love💖 and Coffee☕ by <a href="https://www.github.com/kartikkoul/cool-expense-tracker/" target="_blank">Kartik Koul</a></p>
+      </footer>
     </div>
 
   );
