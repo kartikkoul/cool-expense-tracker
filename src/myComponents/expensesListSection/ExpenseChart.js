@@ -19,13 +19,19 @@ const ExpenseChart = (props) => {
     ]
 
 
-    for(const expense of props.expenses){
-        const expenseMonth = expense.date.getMonth();
-        chartDataPoints[expenseMonth].value += expense.amount;
+    
+    const updateChart = () => {
+        for(const expense of props.filterYear){
+            const expenseMonth = expense.date.getMonth();
+            chartDataPoints[expenseMonth].value += expense.amount;
+        }
     }
 
+    updateChart();
+
+
     return (
-            <Chart dataPoints={chartDataPoints} setFilterYear={props.setFilterYear}/>
+            <Chart expenses={props.expenses} dataPoints={chartDataPoints} setFilterYear={props.setFilterYear} updateChart={updateChart}/>
     )
 }
 

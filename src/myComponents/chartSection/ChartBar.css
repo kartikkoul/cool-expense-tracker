@@ -5,22 +5,29 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding:1%;
+    padding-left: 2%;
+    padding-right: 2%;
 }
 
 .chartBarInner{
-    width: 15%;
-    height: 132px;
+    width: 20%;
+    height: 100px;
     background-color: #C4C4C4;
     border-radius: 15px;
+    display: flex;
+    flex-direction: column-reverse;
 }
 
-.charBarInner .chartBarFill{
+.chartBarInner .chartBarFill{
     width: 100%;
-    background-color: black;
+    background-color: #1B98F5;
+    border-radius: 15px;
+    transition: 500ms;
 }
 
 .chartBar .label{
-    font-size: 10px;
+    font-size: 63%;
     margin-top: 2px;
     margin-left: 1px;
 }

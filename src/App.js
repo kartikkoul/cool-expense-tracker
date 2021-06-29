@@ -10,7 +10,7 @@ function App() {
         {
             id : '1',
             title : 'MacBook Pro',
-            date : new Date(2021, 6, 22),
+            date : new Date(2021, 7, 22),
             amount : 2695.18
         },
         {
@@ -28,13 +28,13 @@ function App() {
         {
             id : '4',
             title : 'Projector',
-            date : new Date(2020, 6, 22),
+            date : new Date(2020, 8, 22),
             amount : 399.00
         },
         {
           id : '5',
           title : 'PS5',
-          date : new Date(2019, 6, 22),
+          date : new Date(2019, 7, 22),
           amount : 499.00
       },
     ]
@@ -54,7 +54,7 @@ function App() {
     <div className="webApp">
       <button onClick={debugHandler} className="debugButton">Debug</button>
       <AddExpense expenses={expenses} setexpenses={setexpenses}/>
-      <ExpenseChart expenses={expenses} setFilterYear={setfilterYear}/>
+      <ExpenseChart expenses={expenses} filterYear={filterYear} setFilterYear={setfilterYear}/>
       <Expenses expenseObj={expenses} filterYear={filterYear}/>
     </div>
 
