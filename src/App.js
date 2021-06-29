@@ -44,15 +44,15 @@ function App() {
     const [expenses, setexpenses] = useState(DUMMY_EXPENSES_DATA);
     const [filterYear, setfilterYear] = useState(expenses);
 
-    const debugHandler = () => {
-      console.log(expenses);
-      console.log(filterYear);
-    }
+    // const debugHandler = () => {
+    //   console.log(expenses);
+    //   console.log(filterYear);
+    // }
     
 
   return (
     <div className="webApp">
-      <button onClick={debugHandler} className="debugButton">Debug</button>
+      {/* <button onClick={debugHandler} className="debugButton">Debug</button> */}
       <AddExpense expenses={expenses} setexpenses={setexpenses} filterYear={filterYear} setFilterYear={setfilterYear}/>
       <ExpenseChart expenses={expenses} filterYear={filterYear} setFilterYear={setfilterYear}/>
       <Expenses expenseObj={expenses} filterYear={filterYear}/>
