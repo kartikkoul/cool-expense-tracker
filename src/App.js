@@ -58,10 +58,9 @@ function App() {
       localStorage.setItem("localExpenses", JSON.stringify(expenses))
     }, [expenses])
 
-    console.log(expenses);
 
 
-    // const debugHandler = () => {
+    // const debugHandler = () =>
     //   console.log(expenses);
     //   console.log(filterYear);
     // }
@@ -74,7 +73,7 @@ function App() {
         top:0,
         width:'95%',
         height:'33px',
-        'margin-top':'2px',
+        marginTop:'2px',
         marginBottom:'1%',
         display:'flex',
         justifyContent:'center',

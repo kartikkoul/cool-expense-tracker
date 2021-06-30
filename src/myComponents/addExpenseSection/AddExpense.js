@@ -38,7 +38,7 @@ const AddExpense = (props) => {
                         date : inputDate,
                         amount : inputAmount,
                 }
-                console.log(newExpense);
+                
                 props.setexpenses([newExpense, ...props.expenses]);
                 props.setFilterYear([newExpense, ...props.filterYear]);
             }
@@ -66,7 +66,6 @@ const AddExpense = (props) => {
         setinputTitle('');
         setinputDate('');
         setinputAmount('');
-        console.log('$150k+/year is not so far!! 🚀')
     }
 
     return (
