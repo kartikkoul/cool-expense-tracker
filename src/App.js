@@ -69,7 +69,7 @@ function App() {
          {/* <button onClick={debugHandler} className="debugButton">Debug</button> */}
         <AddExpense expenses={expenses} setexpenses={setexpenses} filterYear={filterYear} setFilterYear={setfilterYear}/>
         <ExpenseChart expenses={expenses} filterYear={filterYear} setFilterYear={setfilterYear}/>
-        <Expenses expenseObj={expenses} expenses={expenses} setexpenses={setexpenses} filterYear={filterYear}/>
+        <Expenses expenseObj={expenses} expenses={expenses} setexpenses={setexpenses} filterYear={filterYear} setFilterYear={setfilterYear}/>
       </div>
     </div>
 

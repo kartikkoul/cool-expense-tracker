@@ -10,8 +10,10 @@ const Expense = (props) => {
     const [sectionDeleteWidth, setsectionDeleteWidth] = useState("0%")
 
     const deleteHandler = () => {
-        console.log(props.expenseObj);
-        console.log(props.expenses);
+        const newExpenses = props.expenses.filter((e)=>e.id.toString()!==props.expenseObj.id.toString());
+        const newFilterYear = props.filterYear.filter((e)=>e.id.toString()!==props.expenseObj.id.toString())
+        props.setexpenses(newExpenses);
+        props.setFilterYear(newFilterYear);
     }
 
     return (
