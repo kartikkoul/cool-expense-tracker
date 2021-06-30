@@ -10,7 +10,10 @@ const Chart = (props) => {
 
     const filteredYear = e =>{
         props.setFilterYear(
-            e.target.value==='All'?props.expenses:props.expenses.filter(expenses => expenses.date.toLocaleDateString('en-US', {year : 'numeric'})===e.target.value)
+            e.target.value==='All'?props.expenses:props.expenses.filter(expenses => {
+                let date = new Date(expenses.date)
+                return date.toLocaleDateString('en-US', {year : 'numeric'})===e.target.value
+            })
         );
         // props.updateChart();
     }
