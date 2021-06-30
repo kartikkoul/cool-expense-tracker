@@ -42,6 +42,35 @@
     justify-content: flex-end;
 }
 
+.sectionDelete{
+    width: 4%;
+    background-color: #CADEEC;
+    height: 100%;
+}
+
+.sectionDeleteInner{
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+}
+
+.sectionDeleteInner .deleteButton{
+    background-color: rgba(255, 255, 255, 0);
+    border: 0px;
+    /* color: #d11a2a; */
+    color: rgba(34, 34, 34, 0.5);
+    transition: 300ms;
+}
+
+.sectionDeleteInner .deleteButton:hover{
+    cursor: pointer;
+    color: #d11a2a;
+}
+
+.sectionDeleteInner .deleteButton .svg svg{
+}
 
 
 .date{
