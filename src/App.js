@@ -52,25 +52,25 @@ function App() {
 
   return (
     <div className="webApp">
-      {/* <button onClick={debugHandler} className="debugButton">Debug</button> */}
-      <AddExpense expenses={expenses} setexpenses={setexpenses} filterYear={filterYear} setFilterYear={setfilterYear}/>
-      <ExpenseChart expenses={expenses} filterYear={filterYear} setFilterYear={setfilterYear}/>
-      <Expenses expenseObj={expenses} filterYear={filterYear}/>
-
-
       <footer style={{
         position:'relative',
-        bottom:0,
+        top:0,
         width:'95%',
         height:'33px',
-        'margin-top':'1.9%',
-        marginBottom:'2px',
+        'margin-top':'2px',
+        marginBottom:'1%',
         display:'flex',
         justifyContent:'center',
         alignItems:'center'
       }}>
-        <p>Made with Love💖 and Coffee☕ by <a href="https://www.github.com/kartikkoul/cool-expense-tracker/" target="_blank">Kartik Koul</a></p>
+        <p>Made with Love💖 and Coffee☕ by <a href="https://www.github.com/kartikkoul/cool-expense-tracker/" target="_blank"  >Kartik Koul</a> 🚀</p>
       </footer>
+      <div className="appContent">
+         {/* <button onClick={debugHandler} className="debugButton">Debug</button> */}
+        <AddExpense expenses={expenses} setexpenses={setexpenses} filterYear={filterYear} setFilterYear={setfilterYear}/>
+        <ExpenseChart expenses={expenses} filterYear={filterYear} setFilterYear={setfilterYear}/>
+        <Expenses expenseObj={expenses} filterYear={filterYear}/>
+      </div>
     </div>
 
   );

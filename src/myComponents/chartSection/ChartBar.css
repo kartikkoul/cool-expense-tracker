@@ -35,7 +35,7 @@
     font-family: 'Poppins', sans-serif;
 }
 
-@media only screen and (max-width: 420px){
+@media only screen and (max-width: 530px){
     .chartBar{
         width: 4%;
         height: 80px;

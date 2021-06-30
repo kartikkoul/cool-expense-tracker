@@ -8,7 +8,7 @@ const Expenses = (props) => {
             <div className="expensesInner">
                 {props.filterYear.length>0?
                     props.filterYear.map(e=><Expense key={e.id} expenseObj={e}/>)
-                    :"Oops! No expenses found for this year !!"} 
+                    :<p className='noRecord'>Oops! No expenses found for this year !!</p>} 
             </div>
         </div>
     )

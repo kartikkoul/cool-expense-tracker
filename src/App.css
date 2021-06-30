@@ -1,12 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
 
 .webApp{
+  width: 100%;
+}
+.appContent{
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 100%;
 } 
 
-.webApp .debugButton{
+.appContent .debugButton{
   margin-bottom: 10px;
   width: 60px;
   height: 33px;
@@ -17,7 +22,7 @@
   transition: 300ms;
 }
 
-.webApp .debugButton:hover{
+.appContent .debugButton:hover{
   cursor: pointer;
   background-color: rgba(0, 0, 0, 0);
   color: white;
@@ -25,8 +30,8 @@
 }
 
 .webApp footer p{
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
   font-size: 12px;
   color: whitesmoke;
 }
