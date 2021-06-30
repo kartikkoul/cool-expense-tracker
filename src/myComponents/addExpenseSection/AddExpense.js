@@ -35,8 +35,8 @@ const AddExpense = (props) => {
                     newExpense= {
                         id : Math.random().toString(),
                         title : inputTitle,
-                        date : new Date(inputDate),
-                        amount : inputAmount
+                        date : inputDate,
+                        amount : inputAmount,
                 }
                 console.log(newExpense);
                 props.setexpenses([newExpense, ...props.expenses]);

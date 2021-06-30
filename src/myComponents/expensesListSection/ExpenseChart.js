@@ -22,12 +22,15 @@ const ExpenseChart = (props) => {
     
     const updateChart = () => {
         for(const expense of props.filterYear){
-            const expenseMonth = expense.date.getMonth();
+            let date = new Date(expense.date)
+            const expenseMonth = date.getMonth();
             chartDataPoints[expenseMonth].value += expense.amount;
         }
     }
 
-    updateChart();
+    if(props.filterYear.length>0){
+        updateChart();
+    }
 
 
     return (

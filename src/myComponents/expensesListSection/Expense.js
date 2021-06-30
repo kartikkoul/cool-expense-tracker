@@ -3,9 +3,11 @@ import './Expense.css'
 
 const Expense = (props) => {
 
-    const DD = props.expenseObj.date.toLocaleDateString('en-US', {day :'numeric'});
-    const YY = props.expenseObj.date.toLocaleDateString('en-US', {year : 'numeric'});
-    const MM = props.expenseObj.date.toLocaleDateString('en-US', {month : 'long'}).slice(0,3).toUpperCase();
+    const date = new Date(props.expenseObj.date)
+
+    const DD = date.toLocaleDateString('en-US', {day :'numeric'});
+    const YY = date.toLocaleDateString('en-US', {year : 'numeric'});
+    const MM = date.toLocaleDateString('en-US', {month : 'long'}).slice(0,3).toUpperCase();
 
     const [sectionDeleteWidth, setsectionDeleteWidth] = useState("0%")
 
