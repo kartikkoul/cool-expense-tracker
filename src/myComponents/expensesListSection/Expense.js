@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './Expense.css'
 
 const Expense = (props) => {
@@ -7,9 +7,10 @@ const Expense = (props) => {
     const YY = props.expenseObj.date.toLocaleDateString('en-US', {year : 'numeric'});
     const MM = props.expenseObj.date.toLocaleDateString('en-US', {month : 'long'}).slice(0,3).toUpperCase();
 
+    const [sectionDeleteWidth, setsectionDeleteWidth] = useState("0%")
 
     return (
-        <div className='expenseOuter'>
+        <div className='expenseOuter' onMouseOver={()=>setsectionDeleteWidth("4%")} onMouseOut={()=>setsectionDeleteWidth("0%")} >
             <div className="expenseInner">
                 <div className="sectionOneOuter">
                     <div className="sectionOneInner">
@@ -31,7 +32,7 @@ const Expense = (props) => {
                         <p><span className="dollarSign">$</span>{props.expenseObj.amount}</p>
                     </div>
                 </div>
-                <div className="sectionDelete">
+                <div className="sectionDelete" style={{width:sectionDeleteWidth}}>
                     <div className="sectionDeleteInner">
                         <button className='deleteButton'>
                             <div className="svg">
