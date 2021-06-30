@@ -66,7 +66,7 @@ const AddExpense = (props) => {
         setinputTitle('');
         setinputDate('');
         setinputAmount('');
-    }
+    } 
 
     return (
         <div className="addExpenseOuter">
