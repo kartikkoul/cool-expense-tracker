@@ -54,7 +54,7 @@ function App() {
     const [expenses, setexpenses] = useState(getLocalItems());
     const [filterYear, setfilterYear] = useState(expenses);
 
-    useEffect(() => {
+    useEffect(() => { 
       localStorage.setItem("localExpenses", JSON.stringify(expenses))
     }, [expenses])
 
