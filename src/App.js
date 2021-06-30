@@ -4,7 +4,7 @@ import Expenses from './myComponents/expensesListSection/Expenses';
 import AddExpense from './myComponents/addExpenseSection/AddExpense';
 import ExpenseChart from './myComponents/expensesListSection/ExpenseChart';
 
-function App() {
+function App() { 
   // const DUMMY_EXPENSES_DATA = [
   //       {
   //           id : '1',
