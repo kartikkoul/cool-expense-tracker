@@ -43,7 +43,6 @@
 }
 
 .sectionDelete{
-    width: 5%;
     background-color: #CADEEC;
     height: 100%;
     overflow: hidden;
@@ -69,9 +68,6 @@
 .sectionDeleteInner .deleteButton:hover{
     cursor: pointer;
     color: #d11a2a;
-}
-
-.sectionDeleteInner .deleteButton .svg svg{
 }
 
 

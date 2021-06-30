@@ -17,7 +17,7 @@ const Expense = (props) => {
     }
 
     return (
-        <div className='expenseOuter' onMouseOver={()=>setsectionDeleteWidth("4%")} onMouseOut={()=>setsectionDeleteWidth("0%")} >
+        <div className='expenseOuter' onMouseOver={()=>setsectionDeleteWidth("6%")} onMouseOut={()=>setsectionDeleteWidth("0%")} >
             <div className="expenseInner">
                 <div className="sectionOneOuter">
                     <div className="sectionOneInner">
