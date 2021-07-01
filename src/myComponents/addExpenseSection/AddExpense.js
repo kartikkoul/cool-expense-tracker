@@ -5,18 +5,22 @@ const AddExpense = (props) => {
     const [inputTitle, setinputTitle] = useState('');
     const [inputAmount, setinputAmount] = useState('');
     const [inputDate, setinputDate] = useState('');
-
+    const [isValid, setisValid] = useState(true);
+    const [warning, setwarning] = useState('');
 
     const titleChangeHandler = (e) => {
         setinputTitle(e.target.value);
+        setisValid(true)
     }
 
     const amountChangeHandler =(e) => {
         setinputAmount(e.target.value);
+        setisValid(true)
     }
 
     const dateChangeHandler = (e) => {
         setinputDate(e.target.value);
+        setisValid(true);
     }
 
 
@@ -24,14 +28,9 @@ const AddExpense = (props) => {
         e.preventDefault();
 
         let newExpense = {};
+        const inputDateCheck = new Date(inputDate)
 
-        if(inputTitle!==''&&inputDate!==''&&inputAmount!==''){
-            const inputDateCheck = new Date(inputDate);
-            if(inputDateCheck.getFullYear()<2018||inputDateCheck.getFullYear()>2021){
-                    alert('Lets have the recent expenses details. Please enter the expenses for the years between 2018 to 2021!!🚀')
-                }
-
-            else{
+        if(inputTitle.trim().length!==0&&inputDate!==''&&inputAmount.trim().length!==0&&(inputDateCheck.getFullYear()>2018)&&(inputDateCheck.getFullYear()<2021)){
                     newExpense= {
                         id : Math.random().toString(),
                         title : inputTitle,
@@ -41,37 +40,44 @@ const AddExpense = (props) => {
                 
                 props.setexpenses([newExpense, ...props.expenses]);
                 props.setFilterYear([newExpense, ...props.filterYear]);
-            }
-
+                setinputTitle('');
+                setinputDate('');
+                setinputAmount('');
         }
 
-        else {
-            if(inputTitle===''){
-                alert('Enter a title name to add new expense🚀');
-            }
-            else if(inputAmount===''){
-                alert('Enter a amount to add new expense🚀');
-            }
-    
-            else{
-                alert('Select a date to add new expense🚀');
-            }
+        else{
+            setisValid(false);
+            setwarning(
+                () => {
+                    const date = new Date(inputDate);
+                    if(inputTitle.trim().length===0){
+                        return <p>Enter a title name to add new expense🚀</p>
+                    }
+                    else if(inputAmount.trim().length===0){
+                        return <p>Enter a amount to add new expense🚀</p>
+                    }
+
+                    else if(inputDate===''){
+                        return <p>Select a date to add new expense🚀</p>
+                    }
+
+                    else{
+                        return <p>Lets have the recent expenses details. Please enter the expenses for the years between 2018 to 2021!!🚀</p>
+                    }
+                }
+            )
         }
-
-        
-        
-        
-
-
-        setinputTitle('');
-        setinputDate('');
-        setinputAmount('');
     } 
 
     return (
         <div className="addExpenseOuter">
             <div className="addExpenseInner">
                 <form onSubmit={addNewExpense}>
+                    <div className={`${!isValid?"warningAreaOuter":"hidden"}`}>
+                        <div className={`warningArea ${!isValid?"warning":"hidden"}`}>
+                            {warning}
+                        </div>
+                    </div>
                     <div className="inputs">
                         <input type="text" value={inputTitle} placeholder="Title" onChange={titleChangeHandler}/>
                         <input type="number" value={inputAmount} placeholder="Amount" onChange={amountChangeHandler}/>
@@ -79,7 +85,7 @@ const AddExpense = (props) => {
                     </div>
 
                     <div className="buttonArea">
-                    <button className="addExpenseButton" type='submit'>ADD NEW EXPENSE</button>
+                        <button className="addExpenseButton" type='submit'>ADD NEW EXPENSE</button>
                     </div>
                     
                 </form>
