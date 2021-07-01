@@ -49,7 +49,6 @@ const AddExpense = (props) => {
             setisValid(false);
             setwarning(
                 () => {
-                    const date = new Date(inputDate);
                     if(inputTitle.trim().length===0){
                         return <p>Enter a title name to add new expense🚀</p>
                     }
