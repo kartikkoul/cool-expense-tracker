@@ -30,7 +30,7 @@ const AddExpense = (props) => {
         let newExpense = {};
         const inputDateCheck = new Date(inputDate)
 
-        if(inputTitle.trim().length!==0&&inputDate!==''&&inputAmount.trim().length!==0&&(inputDateCheck.getFullYear()>2018)&&(inputDateCheck.getFullYear()<2021)){
+        if(inputTitle.trim().length!==0&&inputDate!==''&&inputAmount.trim().length!==0&&(inputDateCheck.getFullYear()>=2018)&&(inputDateCheck.getFullYear()<=2021)){
                     newExpense= {
                         id : Math.random().toString(),
                         title : inputTitle,
