@@ -121,8 +121,8 @@
     }
 
     .warningArea{
-        width: 60%;
-        height: 15px;
+        width: 90%;
+        height: max-content;
         font-size: 10px;
     }
     
