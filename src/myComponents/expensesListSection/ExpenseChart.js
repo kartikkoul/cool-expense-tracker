@@ -24,7 +24,7 @@ const ExpenseChart = (props) => {
         for(const expense of props.filterYear){
             let date = new Date(expense.date)
             const expenseMonth = date.getMonth();
-            chartDataPoints[expenseMonth].value += expense.amount;
+            chartDataPoints[expenseMonth].value +=parseInt(expense.amount);
         }
     }
 
